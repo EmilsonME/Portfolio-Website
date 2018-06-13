@@ -114,7 +114,16 @@
 	margin: auto auto;
 	
 }
-
+@media (max-width: 374px){
+	.project-wrapper{
+		width: 280px;
+		height: 182.766px;
+	}
+	.project-wrapper img{
+		width: 186px;
+		height: 186px;
+	}
+}
 .projects-wrapper .row .col{
 	padding-bottom: 1.3890rem;
 }
@@ -141,7 +150,7 @@
 }
 
 .modal-body .project-wrapper{
-	width: 280px;
+	width: 270px;
 	height: 182.766px;
 	text-align: center;
 	border: none !important;
