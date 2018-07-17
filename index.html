@@ -13,7 +13,7 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(38,29,33);">
-		<a href="#" class="navbar-brand mb-0"><img src="images/profile.png" width="30" height="30" class="d-inline-block align-top">	EMILSON B. OLAÑO</a>
+		<a href="#" class="navbar-brand mb-0"><img src="images/profile.png" width="30" height="30" class="d-inline-block align-top">EMILSON B. OLAÑO</a>
 
 		<button class="navbar-toggler"  type="button" data-toggler="collapse" data-target="#navItems"  aria-controls="navItems" 					aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -63,7 +63,6 @@
 						<li class="skill">GIT</li>
 						<li class="skill">MS Access</li>
 						<li class="skill">SQLite</li>
-
 					</ul>
 				</div>
 			</div>
@@ -137,11 +136,15 @@
 				<div class="col-10 offset-1 col-sm-6 offset-sm-3">
 					<h2>Contact Me</h2>
 					<hr class="line">
-					<form method="POST" accept="">
+					<div id="formMessage"></div>
+					<form id="myForm" name="myForm" method="POST" action="php/sendMessage.php">
 						<div class="form-group myForm">
-							<input class="form-control" type="text" name="name" placeholder="Name" required>
-							<input class="form-control" type="email" name="email" placeholder="Email" required>
-							<textarea  class="form-control" type="text" name="message" required>Messages</textarea>
+							<span id="nameError"></span>
+							<input class="form-control" type="text" id="name" name="name" placeholder="Name" required>
+							<span id="emailError"></span>
+							<input class="form-control" type="email" id="email" name="email" placeholder="Email" required>
+							<span id="messError"></span>
+							<textarea  class="form-control" type="text" id="message" name="message" required>Messages</textarea>
 							<button class="btn btn-dark send" type="submit" name="submit">Send</button>
 						</div>
 					</form>
@@ -319,6 +322,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/portfolio.js"></script>
 </body>
 </html>
